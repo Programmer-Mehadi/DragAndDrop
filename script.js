@@ -7,13 +7,7 @@ let dropId = '';
 function doDrag() {
   let dragIndex = listData.indexOf(parseInt(dragId));
   let dropIndex = listData.indexOf(parseInt(dropId));
-  if (dragIndex === 0) {
-    for (let i = 0; i < dropIndex; i++) {
-      listData[i] = listData[i + 1];
-    }
-    listData[dropIndex] = Number(dragId);
-  }
-  else if (dragIndex < dropIndex) {
+  if (dragIndex < dropIndex) {
     for (let i = dragIndex; i < dropIndex; i++) {
       listData[i] = listData[i + 1];
     }
